@@ -10,6 +10,7 @@ const TextArea = () => {
                 value={value}
                 placeholder={placeholder}
                 onChange={(e) => onChange(e.target.value)}
+                required
            />
 
        </Container>

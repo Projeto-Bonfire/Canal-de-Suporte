@@ -12,7 +12,6 @@ const Form = () => {
   const clientId = "67e9304a345f806";
   const [uploadImageUrl, setUploadImageUrl] = useState(null);
   const [selectedFile, setSelectedFile] = useState(null);
-
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
   };
@@ -31,7 +30,7 @@ const Form = () => {
       .then(response => {
         const imageUrl = response.data.data.link;
         setUploadImageUrl(imageUrl);
-        console.log("link da imagem no imgur:", uploadImageUrl);
+        console.log("link da imagem no imgur:", imageUrl);
       })
       .catch(error => {
         console.log("Erro ao fazer upload da imagem:", error);
@@ -82,7 +81,8 @@ const Form = () => {
       </section>
          <section id="description2">
            <Label label="adicionar imagem"/>
-      <FileInput onChange={handleFileChange}/>
+      <FileInput onChange={handleFileChange} />
+           <input type="hidden" name="URL da Imagem"  />
            <div id="information2">
              <h1>MB (MEGABYTES)</h1>
              <p>AQUI VOCÊ PODE COLOCAR UMA IMAGEM PARA NOS AJUDAR A ENTENDER MELHOR O SEU PROBLEMA.</p>
@@ -99,4 +99,3 @@ const Form = () => {
 
 export default Form;
 
-// <input type="hidden" name="Data de Criação:" value="x-sheetmonkey-current-date-time" />
