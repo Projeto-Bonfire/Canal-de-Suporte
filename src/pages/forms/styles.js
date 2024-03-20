@@ -33,7 +33,7 @@ flex-direction: column;
 }
 `
 
-export const Box = styled.div`
+export const Box = styled.form`
 height: 75%;
 padding: 25px 0;
 width: 60%;
