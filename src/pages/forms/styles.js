@@ -109,8 +109,7 @@ gap: 20px;
 
     & > section > #information2 p {
       width: 80%;
-
-      font-size: 10px;
+font-size: 10px;
       color: #000;
     }
 

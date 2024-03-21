@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import Button from '../../components/button'
 import FileInput from '../../components/fileInput'
 import Input from '../../components/input'
@@ -16,13 +16,13 @@ const Form = () => {
     setSelectedFile(event.target.files[0]);
   };
 
-  const uploadImgur = () => {
+  const uploadImgur = async () => {
     if (selectedFile) {
       const apiUrl = "https://api.imgur.com/3/image";
       const formData = new FormData();
       formData.append('image', selectedFile);
 
-      axios.post(apiUrl, formData, {
+      await axios.post(apiUrl, formData, {
         headers: {
           'Authorization': `Client-ID ${clientId}`,
         }
@@ -42,12 +42,6 @@ const Form = () => {
 
 
 
-  const [name, setName] = useState('');
-  const [selectType, setSelectType] = useState('dúvida')
-  const [description, setDescription] = useState('')
-  
-
-
   const url = 'https://api.sheetmonkey.io/form/dSxGaWnL6rpGihWRqAwPEw'
 
   return (
@@ -60,13 +54,13 @@ const Form = () => {
       <Box action= {url} method="post">
       <section>
         <Label label="nome completo"></Label>
-        <Input placeholder="Nome" name="Nome" onChange={(e) => setName(e.target.value)}/> 
+        <Input placeholder="Nome" name="Nome" /> 
         
         
       </section>
         <section>
         <Label label="tipo"/>
-          <Select name="Tipo" onChange={(e) => setSelectType(e.target.value)}>
+          <Select name="Tipo">
           <option>dúvida</option>
           <option>erro</option>
           <option>sugestão</option>
@@ -76,13 +70,13 @@ const Form = () => {
           
       <section id="description">
         <Label label="descrição"/>
-        <Input placeholder="Descrição" name="Descrição" onChange={(e) => setDescription(e.target.value)}/> 
+        <Input placeholder="Descrição" name="Descrição"/> 
         <div id="information"><p>AQUI VOCÊ PODE NOS DIZER O QUE ESTÁ ACONTENDO</p></div>
       </section>
          <section id="description2">
            <Label label="adicionar imagem"/>
       <FileInput onChange={handleFileChange} />
-           <input type="hidden" name="URL da Imagem"  />
+           <input type="hidden" name="URL da Imagem" value={uploadImageUrl || ""} />
            <div id="information2">
              <h1>MB (MEGABYTES)</h1>
              <p>AQUI VOCÊ PODE COLOCAR UMA IMAGEM PARA NOS AJUDAR A ENTENDER MELHOR O SEU PROBLEMA.</p>
