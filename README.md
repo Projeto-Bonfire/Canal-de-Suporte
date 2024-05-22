@@ -1,68 +1,29 @@
+# Canal de Suporte
+Sistema destinado a ser um serviço independete para suporte em casos de instabilidade nos demais sistemas.
+...
 
-# React Vite Template
+### Onde Acessar
+[ainda indisponivel](https://suport.thebonfire.tech)
 
-Um template criado facilitar a vida do desenvolvedor, ele iniciante ou não, tal template reuni as principais tecnlogias para o react e já vem configurado para desenvolvimento e build.
+## Tecnologias
+### Linguagem de Programação: 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+### Framework & Bibliotecas:
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-
-## Bibliotecas utilizadas
-- styled-componentes
-- react-router-dom
-- react
-- axios
-- Vite
-
-
-
+### Outros:
+  ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+  ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 ## Funcionalidades
 
-- Vite configurado (build, port, .env, scripts)
-- Theme Provider
-- Global Styles
-- Arquivo de configuração geral (title, baseURL)
-- Rotas configuradas
-- Rota de erro configurada
-- Estrutura de pastas
-- Instancia do axios
+- envio de formulario
+- independete de qualquer API do Bonfire
 
+## Licença
+Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
 
+## Autores
 
-
-## Rodando localmente
-
-Clone o projeto
-
-```bash
-  git clone https://github.com/DARKnx/react-vite-template.git
-```
-
-Entre no diretório do projeto
-
-```bash
-  cd react-vite-template
-```
-
-Instale as dependências
-
-```bash
-  npm install
-```
-
-Inicie o servidor
-
-```bash
-  npm run dev
-```
-
-
-## Deploy
-
-Para fazer o deploy desse projeto rode
-
-```bash
-  npm run build
-```
-
-## Autor
-
-- [@darknx](https://www.github.com/darknx)
-
+[@Gabi-Viana](https://github.com/Gabi-Viana)
+[@AdrianJonathanMB](https://github.com/AdrianJonathanMB)
